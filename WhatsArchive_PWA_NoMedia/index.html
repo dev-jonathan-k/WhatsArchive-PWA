@@ -8,7 +8,7 @@
     <link rel="icon" href="assets/icon-192x192.png" sizes="192x192">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Georgia, serif;
             background-color: #fafafa;
             margin: 0;
             padding: 0;
@@ -42,6 +42,13 @@
             max-width: 100%;
             border-radius: 8px;
         }
+        #searchInput {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
         .footer {
             text-align: center;
             padding-top: 20px;
@@ -51,8 +58,10 @@
 <body>
     <div class="container">
         <h1>WhatsArchive</h1>
-        <label for="fileInput">Import Chat:</label>
+        <label for="fileInput">Import chat:</label>
         <input type="file" id="fileInput" accept=".txt">
+        <label for="searchInput">Search:</label>
+        <input type="text" id="searchInput" placeholder="Search messages">
         <div id="messages"></div>
         <div class="footer">
             <p>&copy; 2025 WhatsArchive</p>
