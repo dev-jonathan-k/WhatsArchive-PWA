@@ -8,7 +8,7 @@
     <link rel="icon" href="assets/icon-192x192.png" sizes="192x192">
     <style>
         body {
-            font-family: Georgia, serif;
+            font-family: Helvetica, "San Francisco", sans-serif;
             background-color: #fafafa;
             margin: 0;
             padding: 0;
@@ -33,7 +33,7 @@
             font-weight: bold;
         }
         .starred {
-            background-color: #ffeb3b;
+            background-color: #ffffd3;
         }
         .media {
             margin-top: 10px;
@@ -49,6 +49,10 @@
             border: 1px solid #ccc;
             border-radius: 4px;
         }
+        #status {
+            margin: 10px 0;
+            font-style: italic;
+        }
         .footer {
             text-align: center;
             padding-top: 20px;
@@ -62,6 +66,7 @@
         <input type="file" id="fileInput" accept=".txt">
         <label for="searchInput">Search:</label>
         <input type="text" id="searchInput" placeholder="Search messages">
+        <div id="status"></div>
         <div id="messages"></div>
         <div class="footer">
             <p>&copy; 2025 WhatsArchive</p>
