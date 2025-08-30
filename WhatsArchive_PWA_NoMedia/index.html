@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsArchive - WhatsApp Chat Viewer</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" href="/assets/icon-192x192.png" sizes="192x192">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      color: #4CAF50;
+      text-align: center;
+    }
+    .message {
+      padding: 10px;
+      background: #fff;
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+      border-radius: 10px;
+    }
+    .message .sender {
+      font-weight: bold;
+    }
+    .starred {
+      background-color: #ffeb3b;
+    }
+    .media {
+      margin-top: 10px;
+    }
+    .media img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .footer {
+      text-align: center;
+      padding-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>WhatsArchive</h1>
+    <div id="messages"></div>
+    <div class="footer">
+      <p>&copy; 2025 WhatsArchive</p>
+    </div>
+  </div>
+  <script src="/script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js').then((reg) => {
+        console.log('Service Worker registered:', reg);
+      }).catch((error) => {
+        console.log('Service Worker registration failed:', error);
+      });
+    }
+  </script>
+</body>
+</html>
