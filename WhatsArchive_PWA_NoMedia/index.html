@@ -3,12 +3,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WhatsArchive - WhatsApp Chat Viewer</title>
-  <link rel="manifest" href="/manifest.json">
-  <link rel="icon" href="/assets/icon-192x192.png" sizes="192x192">
+  <meta name="viewpot" content="width=device-width, initial-scale=1.0">
+  <title>WhatsArchive - WatsApp Chat Viewer</title>
+  
+<<link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/icon-192x192.png" sizes="192x192">
+
   <style>
-    body {
+    
       font-family: Arial, sans-serif;
       background-color: #fafafa;
       margin: 0;
@@ -52,20 +54,18 @@
 <body>
   <div class="container">
     <h1>WhatsArchive</h1>
+        <label for="fileInput">Import Chat:</label>
+      <input type="file" id="fileInput" accept=".txt" />
+    
     <div id="messages"></div>
     <div class="footer">
+  
       <p>&copy; 2025 WhatsArchive</p>
     </div>
   </div>
-  <script src="/script.js"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js').then((reg) => {
-        console.log('Service Worker registered:', reg);
-      }).catch((error) => {
-        console.log('Service Worker registration failed:', error);
-      });
-    }
-  </script>
+
+    <script src="script.js"></script>
+  
+ 
 </body>
 </html>
